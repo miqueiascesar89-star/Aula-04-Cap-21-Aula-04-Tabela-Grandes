@@ -1,188 +1,180 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <title>Tabelas</title>
+</head>
+<body>
     <title>População dos Estados Brasileiros - 2024</title>
-
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 20px;
         }
-
         table {
             width: 100%;
             border-collapse: collapse;
+            font-size: 14px;
         }
-
-        caption {
-            background-color: #ddd;
-            font-family: Georgia, serif;
-            font-size: 20px;
-            font-weight: bold;
-            padding: 10px;
-            border: 1px solid black;
-        }
-
         th, td {
-            border: 1px solid black;
+            border: 1px solid #000;
             padding: 8px;
-        }
-
-        th {
             text-align: left;
-            background-color: #eee;
         }
-
-        td:nth-child(2) {
-            text-align: right;
-        }
-
-        tfoot {
-            background-color: #aaa;
+        th {
             font-weight: bold;
         }
-
-        .destacado {
-            background-color: yellow;
+        .header-title {
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            background-color: #e6e6e6;
+        }
+        .footer-total {
+            background-color: #b3b3b3;
+            font-weight: bold;
+        }
+        .text-right {
+            text-align: right;
         }
     </style>
 </head>
-
 <body>
 
 <table>
-    <caption>População dos Estados Brasileiros - 2024</caption>
-
+    <!-- Título Principal da Tabela -->
     <thead>
+        <tr>
+            <th colspan="3" class="header-title">População dos Estados Brasileiros - 2024</th>
+        </tr>
         <tr>
             <th>Estado</th>
             <th>População</th>
             <th>Comando HTML Utilizado</th>
         </tr>
     </thead>
-
+    
+    <!-- Corpo da Tabela -->
     <tbody>
-
+        <!-- Acre -->
         <tr>
             <td><strong>Acre</strong></td>
-            <td><span class="destacado">830.018</span></td>
-            <td>`Negrito` e <mark>`Destacado`</mark></td>
+            <td class="text-right" style="background-color: #ffff00;"><strong>830.018</strong></td>
+            <td><code>&lt;strong&gt;</code> e <code>&lt;mark&gt;</code> (Negrito e Destacado)</td>
         </tr>
-
+        <!-- Alagoas -->
         <tr>
-            <td><em>Alagoas</em></td>
-            <td>3.365.351</td>
-            <td><i>`Itálico`</i></td>
+            <td><i>Alagoas</i></td>
+            <td class="text-right">3.365.351</td>
+            <td><code>&lt;i&gt;</code> ou <code>&lt;em&gt;</code> (Itálico)</td>
         </tr>
-
+        <!-- Amapá -->
         <tr>
             <td><u>Amapá</u></td>
-            <td>877.613</td>
-            <td>`Texto sublinhado`</td>
+            <td class="text-right">877.613</td>
+            <td><code>&lt;u&gt;</code> (Texto sublinhado)</td>
         </tr>
-
+        <!-- Amazonas -->
         <tr>
-            <td><u><s>Amazonas</s></u></td>
-            <td><u><s>4.269.995</s></u></td>
-            <td><u>`Texto riscado`</u> e <s>`Texto sublinhado'</s></td>
+            <td><s><u>Amazonas</u></s></td>
+            <td class="text-right">4.269.995</td>
+            <td><code>&lt;s&gt;&lt;u&gt;</code> (Texto riscado e Texto sublinhado)</td>
         </tr>
-
+        <!-- Bahia -->
         <tr>
-            <td>Bahia</td>
-            <td>14.141.626</td>
-            <td><sup>Texto sobrescrito</sup></td>
+            <td>Bahia<sup>Superscript</sup></td>
+            <td class="text-right">14.141.626</td>
+            <td><code>&lt;sup&gt;</code> (Texto sobrescrito)</td>
         </tr>
-
+        <!-- Ceará -->
         <tr>
+            <td><abbr title="Ceará">CE</abbr></td>
+            <td class="text-right">9.240.580</td>
+            <td><code>&lt;abbr&gt;</code> (Abreviação)</td>
         </tr>
-
+        <!-- Distrito Federal -->
         <tr>
-            <td><strong>Distrito Federal</strong></td>
-            <td>3.098.883</td>
-            <td>`Texto em negrito`</td>
+            <td><b>Distrito Federal</b></td>
+            <td class="text-right">3.098.883</td>
+            <td><code>&lt;b&gt;</code> (Texto em negrito)</td>
         </tr>
-
+        <!-- Espírito Santo -->
         <tr>
             <td><q>Espírito Santo</q></td>
-            <td>4.108.508</td>
-            <td>`Citação curta`</td>
+            <td class="text-right">4.108.508</td>
+            <td><code>&lt;q&gt;</code> (Citação curta)</td>
         </tr>
-
+        <!-- Goiás -->
         <tr>
             <td><cite>Goiás</cite></td>
-            <td>7.206.589</td>
-            <td>`Citação de fonte`</td>
+            <td class="text-right">7.206.589</td>
+            <td><code>&lt;cite&gt;</code> (Citação de fonte)</td>
         </tr>
-
+        <!-- Maranhão -->
         <tr>
-            <td><code>Maranhão</code></td>
-            <td>6.775.805</td>
-            <td>`Texto monoespaçado`</td>
+            
+            <td><code style="font-family: monospace;">Maranhão</code></td>
+            <td class="text-right">6.775.805</td>
+            <td><code>&lt;code&gt;</code> (Texto monoespaçado)</td>
         </tr>
-
+        <!-- Mato Grosso -->
         <tr>
-            <td><pre>Mato Grosso</pre></td>
-            <td>3.658.813</td>
-            <td>Texto pré-formatado</td>
+            <td><pre style="margin: 0; display: inline;">Mato Grosso</pre></td>
+            <td class="text-right">3.658.813</td>
+            <td><code>&lt;pre&gt;</code> (Texto pré-formatado)</td>
         </tr>
-
+        <!-- Paraíba -->
         <tr>
-            <td>Paraíba</td>
-            <td>4.059.905</td>
-            <td><small>`Texto pequeno`</small></td>
+            <td><small>Paraíba</small></td>
+            <td class="text-right">4.059.905</td>
+            <td><code>&lt;small&gt;</code> (Texto pequeno)</td>
         </tr>
-
+        <!-- Piauí -->
         <tr>
-            <td>Piauí</td>
-            <td>3.281.480</td>
-            <td>`Texto subscrito`</td>
+            <td>Piauí<sub>Subscript</sub></td>
+            <td class="text-right">3.281.480</td>
+            <td><code>&lt;sub&gt;</code> (Texto subscrito)</td>
         </tr>
-
+        <!-- Rio de Janeiro -->
         <tr>
-            <td>
-                <blockquote>
-                    Rio de Janeiro
-                </blockquote>
-            </td>
-            <td>16.054.524</td>
-            <td>Citação em bloco</td>
+            <td><blockquote>Rio de Janeiro</blockquote></td>
+            <td class="text-right">16.054.524</td>
+            <td><code>&lt;blockquote&gt;</code> (Citação em bloco)</td>
         </tr>
-
+        <!-- Rio Grande do Sul -->
         <tr>
             <td><strong>Rio Grande do Sul</strong></td>
-            <td>10.882.965</td>
-            <td>`Negrito`</td>
+            <td class="text-right">10.882.965</td>
+            <td><code>&lt;strong&gt;</code> (Negrito)</td>
         </tr>
-
+        <!-- Rondônia -->
         <tr>
             <td><em>Rondônia</em></td>
-            <td>1.616.379</td>
-            <td>`Itálico`</td>
+            <td class="text-right">1.616.379</td>
+            <td><code>&lt;em&gt;</code> (Itálico)</td>
         </tr>
-
+        <!-- Roraima -->
         <tr>
-            <td><mark>Roraima</mark></td>
-            <td>636.707</td>
-            <td>`Texto destacado`</td>
+            <td style="background-color: #ffff00;"><mark>Roraima</mark></td>
+            <td class="text-right" style="background-color: #ffff00;">636.707</td>
+            <td style="background-color: #ffff00;"><code>&lt;mark&gt;</code> (Texto destacado)</td>
         </tr>
-
+        <!-- Tocantins -->
         <tr>
             <td><abbr title="Tocantins">TO</abbr></td>
-            <td>1.607.363</td>
-            <td>`Abreviação`</td>
+            <td class="text-right">1.607.363</td>
+            <td><code>&lt;abbr&gt;</code> (Abreviação)</td>
         </tr>
-
     </tbody>
-
+    
+    <!-- Rodapé da Tabela -->
     <tfoot>
-        <tr>
+        <tr class="footer-total">
             <td>Total da população estimada:</td>
-            <td>Soma total</td>
+            <td class="text-right">Soma total</td>
             <td>Realizar a soma das colunas</td>
         </tr>
     </tfoot>
-
 </table>
-
 </body>
-</html>    
+</html>
